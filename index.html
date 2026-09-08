@@ -141,8 +141,11 @@ img{max-width:100%}
 .ticker{border-block:1px solid var(--hair); background:var(--ink-2); overflow:hidden; padding-block:13px}
 .ticker-track{display:flex; gap:0; width:max-content; animation:slide 42s linear infinite}
 @keyframes slide{to{transform:translateX(-50%)}}
-.ticker-run{display:flex; align-items:center; gap:44px; padding-right:44px;
+.ticker-run{display:flex; align-items:center; gap:34px; padding-right:34px;
   font-family:var(--mono); font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--ash)}
+/* the diamond sits between phrases, so it needs the same air on both
+   sides rather than being jammed against the words before it */
+.ticker-run > span{display:inline-flex; align-items:center; gap:34px}
 .ticker-run i{color:var(--ember); font-style:normal}
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
 
